@@ -11,7 +11,7 @@ import TheHeader from './components/TheHeader.vue';
 
     <footer class="footer footer-center p-4 bg-base-300 text-base-content rounded-box mt-10">
       <aside>
-        <p>Copyright © 2025 - Lab 5 Microblog</p>
+        <p></p>
       </aside>
     </footer>
   </div>
