@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import {logger} from "../services/loggerService.js";
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -12,6 +13,8 @@ export const readFile = async <T>(fileName: string): Promise<T[]> => {
         const data = await fs.readFile(filePath, 'utf-8');
         return JSON.parse(data);
     } catch (error) {
+        logger.error(`Error while reading ${fileName}`);
+
         return [];
     }
 };
